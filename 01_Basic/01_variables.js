@@ -34,3 +34,5 @@ console.table([accountId,accountEmail,accountPassword,accountAddress,accountStat
 Prefer not use to var keyword
 because issue in block and function scope
 */
+
+var testing = "abc";
