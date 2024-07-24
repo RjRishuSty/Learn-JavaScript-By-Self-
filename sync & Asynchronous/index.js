@@ -69,13 +69,82 @@
 //  TODO: (2) When promises give success status => fullfield.
 //  TODO: (3) When promise give error status => rejected.
 
-let promise = new Promise((resolve, reject) => {
-    console.log("Promises is created. it is pending status"); // TODO: pending status
-    // resolve("Data sent success") // this is fullfield status
-    reject("Get some error") // this is reject status.
-});
+// let promise = new Promise((resolve, reject) => {
+//     console.log("Promises is created. it is pending status"); // TODO: pending status
+//     // resolve("Data sent success") // this is fullfield status
+//     reject("Get some error") // this is reject status.
+// });
 
+// TODO: then & catch..............
 
+// function getPromises(){
+//     return new Promise((resolve, reject)=>{
+//         console.log("Promise function is running on.");
+//         resolve("Success");
+//         // reject("error");
+//     })
+// }
+// // TODO: success.
+// let promise = getPromises();
+// promise.then((responce)=>{
+//     console.log("Promise is fullfiled",responce);
+// });
+// // TODO: reject......
+// promise.catch((error)=>{
+// console.log('Rejected',error);
+// });
+
+// TODO: Final Promise Syntex...............
+
+// function getData(data) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data", data);
+//       resolve('success')
+//     }, 2000);
+//   });
+// }
+
+// getData(1)
+//   .then((res) => {
+//     return getData(2);
+//   })
+//   .then((res) => {
+//     return getData(3);
+//   })
+//   .then((res) => {
+//     console.log("Promises is fullfield.", res);
+//   });
+
+// TODO: Async - Await .................
+
+// TODO: what is Async - await ?
+// TODO:=> ASYNC => async and await are keywords in JavaScript that simplify working with promises and make asynchronous code look and behave more like synchronous code. They are part of ES2017 (ES8) and provide a more readable and concise syntax for performing asynchronous operations..
+// TODO: async Keyword.......
+// The async keyword is used to declare an asynchronous function. An async function always returns a promise, and any value returned from it will be automatically wrapped in a resolved promise.
+// TODO: AWait Keyword 
+// The await keyword can only be used inside an async function. It pauses the execution of the function until the promise is resolved, and then resumes the function, returning the resolved value. If the promise is rejected, await throws the rejected value.
+
+// IIFE => immendiately invoked function expression.
+// Example 
+function getData(data){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            console.log('data',data);
+            resolve('success')
+        },2000)
+    })
+}
+
+(async function(){
+    console.log('data1.............')
+    await getData(1);
+    console.log('data2.............')
+    await getData(2);
+    console.log('data3.............')
+    await getData(3);
+})();
+ 
 
 
 
