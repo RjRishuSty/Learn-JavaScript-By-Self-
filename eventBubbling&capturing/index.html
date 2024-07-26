@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Bubbling & Capturing.</title>
 </head>
+
 <body>
     <h1>Event Bubbling And Capturing.</h1>
+    <div class="container">
+        <button>Click Me</button>
+    </div>
+
+    <h1>Prevent Default.</h1>
+    <form method="post" id="formSubmit">
+        Full Name: <input type="text" name="fullname" id="fullname" value="" /> <br>
+        Email : <input type="email" name="email" id="email" value="" /> <br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
     <script src="./index.js" type="module"></script>
 </body>
+
 </html>
